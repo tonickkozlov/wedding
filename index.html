@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Свадьба Антона и Алены</title>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="http://allfont.ru/allfont.css?fonts=teddy-bear" rel="stylesheet" type="text/css" />
+    <link href="http://allfont.ru/allfont.css?fonts=ubuntu" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="main"
+        data-aos="little-zoom"
+        data-aos-anchor-placement="top-top">
+        <div class="spacer"></div>
+        <img class="main-logo" alt="Wedding logo" src="wedding.gif" />
+        <span class="hero__scroll">
+            <i class="chevron bottom"></i>
+        </span>
+    </div>
+
+    <div class="poem"
+        data-aos="fade-right"
+        data-aos-anchor-placement="top-top">
+        <p>Невесту все любить горазды</p>
+        <p>В красивом платье и фате</p>
+        <p>Вы полюбите тараканов</p>
+        <p>В ее измученном мозгу</p>
+        <br>
+        <p>(c) Винсент Ван Гог</p>
+    </div>
+
+    <div class="details">
+        <p class="title" id="title"></p>
+        <br>
+        <p>Мы очень ценим Вашу поддержку и любовь.</p>
+        <br>
+        <p>Приглашаем Вас на торжество, посвященное нашему бракосочетанию,
+        которое состоится 26 августа 2017 года во Дворце Бракосочетаний ВДНХ.</p>
+        <p>Сбор гостей состоится у дверей <a
+            href="https://yandex.ru/maps/213/moscow/?mode=search&ll=37.626645%2C55.835730&z=16&text=%D0%B4%D0%B2%D0%BE%D1%80%D0%B5%D1%86%20%D0%B1%D1%80%D0%B0%D0%BA%D0%BE%D1%81%D0%BE%D1%87%D0%B5%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B2%D0%B4%D0%BD%D1%85&sll=37.671911%2C55.774841&sspn=0.020986%2C0.008212&ol=biz&oid=1241795320"
+            target="_blank">Дворца</a> в <a href="zags.ics" target="_blank">15:00</a> или в <a
+            href="https://yandex.ru/maps/213/moscow/?mode=search&ll=37.671911%2C55.774841&z=16&text=%D0%9A%D0%B0%D1%84%D0%B5%20%D0%91%D1%83%D1%80%D0%B6%D1%83%D0%B9&sll=37.854629%2C55.923079&sspn=0.083942%2C0.032723&ol=biz&oid=16711117719"
+            target="_blank">ресторане “Буржуй”</a> в <a href="cafe.ics" target="_blank">17:30</a>.</p>
+        <p>Также, просим Вас пройти <a href="https://ru.surveymonkey.com/r/LNW7WTQ" target="_blank">индивидуальный организационный опросник</a></p>
+        <br>
+        <div  class="bunny-container">
+        <p>С любовью,</p>
+        <p>Алёна и Антон</p><img class="bunny" src="jump_bunny.gif"/>
+        </div>
+    </div>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        var qs = (function(a) {
+            if (a == "") return {};
+            var b = {};
+            for (var i = 0; i < a.length; ++i)
+            {
+                var p=a[i].split('=', 2);
+                if (p.length == 1)
+                    b[p[0]] = "";
+                else
+                    b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
+        })(window.location.search.substr(1).split('&'));
+        document.getElementById('title').innerText = qs.q;
+    </script>
+</body>
