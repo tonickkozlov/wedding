@@ -4,6 +4,11 @@ html, body {
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Teddy Bear'; /*a name to be used later*/
+    src: url('teddybear.ttf'); /*URL to font*/
+}
+
 * {
     box-sizing: border-box;
 }
