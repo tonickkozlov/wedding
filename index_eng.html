@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Anton & Alena's wedding</title>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+<style>
+.details {
+    font-family: 'Lemonada', arial;
+    font-size: 40px;
+    color: white;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+    <div class="main"
+        data-aos="little-zoom"
+        data-aos-offset="50"
+        data-aos-anchor-placement="top-top">
+        <div class="spacer"></div>
+        <img class="main-logo" alt="Wedding logo" src="wedding.gif" />
+        <span class="hero__scroll">
+            <i class="chevron bottom"></i>
+        </span>
+    </div>
+
+    <div class="details">
+        <p class="title" id="title"></p>
+        <br>
+        <p>We are honored to be your friends. Thank you for your constant love and support.
+        </p>
+        <br>
+        <p>We are happy to invite you to the celebration of our wedding on August, 26.</p>
+        <p>The ceremony will take place at the <a href="https://yandex.ru/maps/213/moscow/?mode=search&ll=37.626645%2C55.835730&z=16&text=%D0%B4%D0%B2%D0%BE%D1%80%D0%B5%D1%86%20%D0%B1%D1%80%D0%B0%D0%BA%D0%BE%D1%81%D0%BE%D1%87%D0%B5%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B2%D0%B4%D0%BD%D1%85&sll=37.671911%2C55.774841&sspn=0.020986%2C0.008212&ol=biz&oid=1241795320"
+            target="_blank">Wedding Palace of VDNKh</a> in Moscow <a href="zags.ics"
+            target="_blank">at 3 pm </a>and then will be continued at the <a
+            href="https://yandex.ru/maps/213/moscow/?mode=search&ll=37.671911%2C55.774841&z=16&text=%D0%9A%D0%B0%D1%84%D0%B5%20%D0%91%D1%83%D1%80%D0%B6%D1%83%D0%B9&sll=37.854629%2C55.923079&sspn=0.083942%2C0.032723&ol=biz&oid=16711117719"
+        target="_blank">restaurant</a></p>
+        <p>Your presence at our wedding means a world to us.</p>
+        <br>
+        <div  class="bunny-container">
+        <p>Yours,</p>
+        <p>Alena & Anton</p><img class="bunny" src="jump_bunny.gif"/>
+        </div>
+    </div>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+        setTimeout(function() {
+            AOS.init();
+        }, 1000);
+        var qs = (function(a) {
+            if (a == "") return {};
+            var b = {};
+            for (var i = 0; i < a.length; ++i)
+            {
+                var p=a[i].split('=', 2);
+                if (p.length == 1)
+                    b[p[0]] = "";
+                else
+                    b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+            return b;
+        })(window.location.search.substr(1).split('&'));
+        document.getElementById('title').innerText = qs.q;
+    </script>
+</body>
